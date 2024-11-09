@@ -1,8 +1,13 @@
 (function() {
+    // スクリプトタグからデータ属性を取得
+    const script = document.currentScript;
+    const token = script.dataset.token;
+    const baseUrl = script.dataset.baseurl;
+    
     // グローバル設定
-    window.difyChatbotConfig = {
-      token: 'vvDaYQSLKyTKczXF',
-      baseUrl: 'https://occ-dify.com'
+    window.difyChatbotConfigR = {
+      token: token,
+      baseUrl: baseUrl
     };
   
     // チャットボタンを動的に作成
@@ -31,12 +36,12 @@
     // チャットウィンドウを開く
     function openChatWindow() {
       // 既にチャットウィンドウが開いている場合は何もしない
-      if (document.getElementById('dify-chat-window')) return;
+      if (document.getElementById('dify-chat-windowR')) return;
     
       // iframeでチャットウィンドウを作成
       const chatWindow = document.createElement('iframe');
-      chatWindow.id = 'dify-chat-window';  // IDを設定して後で削除しやすくする
-      chatWindow.src = window.difyChatbotConfig.baseUrl + '/chat/' + window.difyChatbotConfig.token;
+      chatWindow.id = 'dify-chat-windowR';  // IDを設定して後で削除しやすくする
+      chatWindow.src = window.difyChatbotConfigR.baseUrl + '/chat/' + window.difyChatbotConfigR.token;
       chatWindow.style.position = 'fixed';
       chatWindow.style.bottom = '80px';
       chatWindow.style.right = '20px';
