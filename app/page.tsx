@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   useEffect(() => {
@@ -49,10 +50,25 @@ export default function Home() {
     }
   }, []);
 
+  const imageVariants1 = {
+    animate: {
+      y: [0, -20, 20, 0],
+      transition: {
+        duration: 15, // アニメーションの持続時間を長く設定
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div className="grid grid-rows-[20px_1fr] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-row gap-10 row-start-2 items-center sm:items-start w-full h-full">
-        <div className="relative flex-1 h-full">
+        <motion.div
+          className="relative flex-1 h-full"
+          variants={imageVariants1}
+          animate="animate"
+        >
           <Image
             src="/images/recruit.jpg"
             alt="Image 1"
@@ -60,7 +76,7 @@ export default function Home() {
             objectFit="cover"
             className="rounded-3xl"
           />
-        </div>
+        </motion.div>
         <div className="relative flex-1 h-full">
           <Image
             src="/images/dify.jpg"
