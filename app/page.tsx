@@ -74,7 +74,7 @@ export default function Home() {
             alt="Image 1"
             layout="fill"
             objectFit="cover"
-            className="rounded-3xl"
+            className="rounded-3xl shadow-2xl border-2 border-blue-700"
           />
         </motion.div>
         <div className="relative flex-1 h-full">
@@ -83,7 +83,7 @@ export default function Home() {
             alt="Image 2"
             layout="fill"
             objectFit="cover"
-            className="rounded-3xl"
+            className="rounded-3xl shadow-2xl border-2 border-blue-700"
           />
         </div>
       </main>
