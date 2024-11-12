@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -49,13 +50,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1>Welcome to Next.js!</h1>
+    <div className="grid grid-rows-[20px_1fr] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-row gap-10 row-start-2 items-center sm:items-start w-full h-full">
+        <div className="relative flex-1 h-full">
+          <Image
+            src="/images/recruit.jpg"
+            alt="Image 1"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-3xl"
+          />
+        </div>
+        <div className="relative flex-1 h-full">
+          <Image
+            src="/images/recruit.jpg"
+            alt="Image 2"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-3xl"
+          />
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center w-full">
-        <div>footer</div>
-      </footer>
     </div>
   );
 }

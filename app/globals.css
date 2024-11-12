@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #e0f7fa; /* 淡いライトブルー */
   --foreground: #171717;
 }
 
