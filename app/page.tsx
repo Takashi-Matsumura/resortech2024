@@ -63,7 +63,7 @@ export default function Home() {
         </div>
         <div className="relative flex-1 h-full">
           <Image
-            src="/images/recruit.jpg"
+            src="/images/dify.jpg"
             alt="Image 2"
             layout="fill"
             objectFit="cover"
