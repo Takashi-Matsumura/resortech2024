@@ -54,7 +54,7 @@
     chatWindow.style.position = 'fixed';
     chatWindow.style.bottom = '80px';
     chatWindow.style.left = '20px';
-    chatWindow.style.width = '600px';
+    chatWindow.style.width = '650px';
     chatWindow.style.height = '600px';
     chatWindow.style.border = 'none';
     chatWindow.style.zIndex = '9999';  // 他の要素より前面に表示
